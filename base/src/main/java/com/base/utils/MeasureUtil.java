@@ -1,4 +1,4 @@
-package com.new_zhuama.utils;
+package com.base.utils;
 
 import android.content.Context;
 import android.util.DisplayMetrics;

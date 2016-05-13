@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.new_zhuama.utils.MeasureUtil;
+import com.base.utils.MeasureUtil;
 
 public class CustomView extends View {
 

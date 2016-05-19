@@ -21,7 +21,7 @@ public class HttpRequest {
 
     private static final int TIME_OUT_DEfAULT = 10;
     private Retrofit mRetrofit;
-    private Apis mApis;
+    private ApiServices mApiServices;
 
 
     private HttpRequest() {
@@ -57,16 +57,26 @@ public class HttpRequest {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
 
-        mApis=mRetrofit.create(Apis.class);
+        mApiServices =mRetrofit.create(ApiServices.class);
 
     }
 
 
     public static HttpRequest getInstance(){
         if (mRequest==null){
-            mRequest=new HttpRequest();
+
+            synchronized (HttpRequest.class){
+                if (mRequest==null){
+                    mRequest=new HttpRequest();
+                }
+            }
         }
         return  mRequest;
+    }
+
+
+    public ApiServices getApiService(){
+        return  mApiServices;
     }
 
 

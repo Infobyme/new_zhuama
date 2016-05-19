@@ -1,4 +1,4 @@
-package com.new_zhuama.activity;
+package com.new_zhuama.main.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;

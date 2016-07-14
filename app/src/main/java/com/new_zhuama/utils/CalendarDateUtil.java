@@ -1,40 +1,31 @@
 package com.new_zhuama.utils;
 
-import android.util.Log;
+
+import com.new_zhuama.entity.Day;
+
+import java.util.Calendar;
 
 /**
  * Created by zhuama on 16/4/20.
  */
 public class CalendarDateUtil {
 
-    public static int getMonthFirstDay(int year,int month) {
-        boolean isRun = false;
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            isRun = true;
-        }
-        int startToCurrentSumDay = 0;//从1900到当前日期的总天数
-        for (int i = 1900; i < year; i++) {
-            if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0)
-                startToCurrentSumDay += 366;
-            else
-                startToCurrentSumDay += 365;
-        }
-
-        int currentYearMonthDay = 0;//当前年份时,当前过的天数
-        for (int i = 1; i <=month ; i++) {
-            currentYearMonthDay += getMonthDay(isRun, i);
-        }
-        int sumDays = startToCurrentSumDay + currentYearMonthDay;
-
-        int weekday = sumDays % 7 ;
-//        if (weekday == 7) {
-//            weekday = 0;
-//        }
-        return weekday;
-
+    public static int getMonthFirstDay(Day day) {
+        Calendar time = Calendar.getInstance();
+        time.set(Calendar.YEAR, day.getYear());
+        time.set(Calendar.MONTH, day.getMonth() - 1);
+        time.set(Calendar.DATE, 1);
+        return time.get(Calendar.DAY_OF_WEEK);
     }
 
-    private static int getMonthDay(boolean isRun, int month) {
+    public static boolean isRun(int year) {
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public static int getMonthDay(boolean isRun, int month) {
         int sum = 0;
         switch (month) {
             case 1:
@@ -57,5 +48,16 @@ public class CalendarDateUtil {
                 break;
         }
         return sum;
+    }
+
+
+    public static int getMaxRowForMonth(int firstDay, int sumDay) {
+        int maxRow = 0;
+        for (int day = 0; day < sumDay; day++) {
+            int column = (day + firstDay - 1) % 7;
+            int row = (day + firstDay - 1) / 7;
+            maxRow = row;
+        }
+        return maxRow;
     }
 }

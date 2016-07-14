@@ -2,13 +2,21 @@ package com.new_zhuama.mvp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.base.base.CommonAdapter;
+import com.base.base.CommonViewHolder;
 import com.new_zhuama.R;
 import com.new_zhuama.mvp.entity.MovieEntity;
 import com.new_zhuama.mvp.net.HttpMethod;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -25,24 +33,52 @@ public class TestAcivity extends Activity {
     Button clickMeBN;
     @Bind(R.id.result_TV)
     TextView resultTV;
+    @Bind(R.id.list)
+    ListView list;
+
+
+    List<String> data = new ArrayList<>();
+    private CommonAdapter<String> mAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         ButterKnife.bind(this);
+
+        for (int i = 0; i < 100; i++) {
+            data.add(i + "");
+        }
+
+        mAdapter = new CommonAdapter<String>(this, data, R.layout.item_text) {
+            @Override
+            public void convert(CommonViewHolder holder, String item, int position) {
+                holder.setText(R.id.tv_common, item);
+            }
+        };
+        list.setAdapter(mAdapter);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                data.remove(position);
+                mAdapter.notifyDataSetChanged();
+            }
+        });
     }
 
     @OnClick(R.id.click_me_BN)
     public void onClick() {
+//        getMovie();
 
-        getMovie();
+        data.add(0, 100 + "");
+        mAdapter.notifyDataSetChanged();
     }
 
     private void getMovie() {
 
 
-        Subscriber<MovieEntity> subscriber=new Subscriber<MovieEntity>() {
+        Subscriber<MovieEntity> subscriber = new Subscriber<MovieEntity>() {
             @Override
             public void onCompleted() {
                 Toast.makeText(TestAcivity.this, "oncompleted", Toast.LENGTH_SHORT).show();
@@ -59,7 +95,7 @@ public class TestAcivity extends Activity {
             }
         };
 
-        HttpMethod.getInstance().getTopMovie(subscriber,0,10);
+        HttpMethod.getInstance().getTopMovie(subscriber, 0, 10);
 
 //        String baseUrl="https://api.douban.com/v2/movie/";
 //

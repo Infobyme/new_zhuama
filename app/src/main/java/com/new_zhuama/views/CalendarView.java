@@ -22,6 +22,7 @@ public class CalendarView extends View {
 
     private static final int MAX_NUM_ROW = 6;
     private static final int MAX_NUM_COLUMN = 7;
+    private static final int NUM_COLUMN = 30;
 
     private Paint mTextPaint;
     private Paint mOvalPaint;
@@ -38,6 +39,7 @@ public class CalendarView extends View {
 
     private int mRowSize;
     private int mColumnSize;
+    private int mRowAveSize;
 
     private int mYear;//几年
     private int mMonth;//几月
@@ -106,10 +108,40 @@ public class CalendarView extends View {
         initSize();
         days = new int[6][7];
         mCurrentRowStart = mStrokeStart;
-//        drawWeek(canvas);
         int dayInt;
+
+        for (int i = 1; i <= MAX_NUM_COLUMN; i++) {
+            if (i < MAX_NUM_COLUMN) {
+                int columnLine = i * mColumnSize;
+                canvas.drawLine(columnLine, 0, columnLine, getHeight(), mTextPaint);
+            }
+        }
+
+        for (int i = 1; i <= MAX_NUM_ROW; i++) {
+
+            if (i < MAX_NUM_ROW) {
+                int rowLine = i * mRowSize;
+                canvas.drawLine(0, rowLine, getWidth(), rowLine, mTextPaint);
+            }
+        }
+
+        dayInt = 0;
+        for (int day = 0; day < mMonthday; day++) {
+            dayInt = day + 1;
+            int column = (day + mMonthFirstDay - 1) % 7;
+            int row = (day + mMonthFirstDay - 1) / 7;
+
+            days[row][column] = day + 1;
+
+            int startX = (int) (mColumnSize * column + (mColumnSize - mTextPaint.measureText(String.valueOf(dayInt))) / 2);
+            int startY = (int) (mRowSize * row + NUM_COLUMN - (mTextPaint.ascent() + mTextPaint.descent()) / 2);
+//            (mRowSize * row + mRowSize / 2 - mRowSize / 3 - (mTextPaint.ascent() + mTextPaint.descent()) / 2)
+
+            canvas.drawText(String.valueOf(dayInt), startX, startY, mTextPaint);
+        }
+
         for (int i = 0; i < mMonthday; i++) {
-            dayInt=i+1;
+            dayInt = i + 1;
             int row = (i + mMonthFirstDay - 1) / 7;
             int nextRow = (i + 1 + mMonthFirstDay - 1) / 7;//下一个数字所在行数
             if (dayInt <= mStrokeEnd && dayInt >= mStrokeStart) {
@@ -120,26 +152,12 @@ public class CalendarView extends View {
                     }
                 } else {
                     drawOval(canvas);
-                    mCurrentRowStart=dayInt+1;
+                    mCurrentRowStart = dayInt + 1;
                     mSpaceCount = 0;
                 }
             }
         }
 
-        dayInt=0;
-        for (int day = 0; day < mMonthday; day++) {
-            dayInt = day + 1;
-            int column = (day + mMonthFirstDay - 1) % 7;
-            int row = (day + mMonthFirstDay - 1) / 7;
-            int nextRow = (day + 1 + mMonthFirstDay - 1) / 7;//下一个数字所在行数
-
-            days[row][column] = day + 1;
-
-            int startX = (int) (mColumnSize * column + (mColumnSize - mTextPaint.measureText(String.valueOf(dayInt))) / 2);
-            int startY = (int) (mRowSize * row + mRowSize / 2 - (mTextPaint.ascent() + mTextPaint.descent()) / 2);
-
-            canvas.drawText(String.valueOf(dayInt), startX, startY, mTextPaint);
-        }
 
     }
 
@@ -149,32 +167,16 @@ public class CalendarView extends View {
         int drawRow = (mCurrentRowStart + mMonthFirstDay - 2) / 7;
 
         int rectX = mColumnSize * drawColumn;
-        int rectY = mRowSize * drawRow;
+        int rectY = mRowSize * drawRow + NUM_COLUMN +10;
 
         int endRectX = rectX + mColumnSize * mSpaceCount;
-        int endRectY = rectY + mRowSize;
+        int endRectY = rectY + mRowAveSize;
 
 
-        RectF rectF = new RectF(rectX, rectY+20, endRectX, endRectY-20);
+        RectF rectF = new RectF(rectX, rectY, endRectX, endRectY);
 
-        canvas.drawRoundRect(rectF, 100, 100, mOvalPaint);
+        canvas.drawRect(rectF, mOvalPaint);
         mSpaceCount = 0;
-    }
-
-    private void drawWeek(Canvas canvas) {
-
-
-        for (int week = 0; week < weekStrings.length; week++) {
-
-            String weekString = weekStrings[week];
-
-            int startX = (int) (mColumnSize * week + (mColumnSize - mTextPaint.measureText(weekString)) / 2);
-
-            int startY = (int) (mRowSize + mRowSize / 2 - (mTextPaint.ascent() + mTextPaint.descent()) / 2);
-
-            canvas.drawText(weekString, startX, startY, mTextPaint);
-
-        }
     }
 
     private int dwonX, dwonY, upX, upY;
@@ -210,5 +212,6 @@ public class CalendarView extends View {
     private void initSize() {
         mRowSize = getHeight() / MAX_NUM_ROW;
         mColumnSize = getWidth() / MAX_NUM_COLUMN;
+        mRowAveSize = (mRowSize - NUM_COLUMN) / 5;
     }
 }

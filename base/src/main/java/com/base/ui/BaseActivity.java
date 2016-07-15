@@ -1,9 +1,8 @@
 package com.base.ui;
 
-import android.content.Context;
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 
 /**
  * Created by zhuama on 16/5/13.
@@ -11,13 +10,13 @@ import android.util.Log;
 public abstract class BaseActivity extends FragmentActivity {
 
 
-    private Context mContxt;
+    private Activity mActivity;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mContxt=this;
+        mActivity=this;
     }
 
 //    public abstract void init();

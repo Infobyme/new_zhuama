@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.base.base.CommonAdapter;
 import com.base.base.CommonViewHolder;
+import com.base.utils.ImageLoadUtil;
 import com.new_zhuama.R;
 import com.new_zhuama.mvp.entity.MovieEntity;
 import com.new_zhuama.mvp.net.HttpMethod;
@@ -54,6 +55,7 @@ public class TestAcivity extends Activity {
         mAdapter = new CommonAdapter<String>(this, data, R.layout.item_text) {
             @Override
             public void convert(CommonViewHolder holder, String item, int position) {
+                holder.setImageViewByImageLoad(R.id.image, ImageLoadUtil.imageUrls[position]);
                 holder.setText(R.id.tv_common, item);
             }
         };
@@ -71,8 +73,10 @@ public class TestAcivity extends Activity {
     public void onClick() {
 //        getMovie();
 
-        data.add(0, 100 + "");
-        mAdapter.notifyDataSetChanged();
+//        Intent intent=new Intent(this,BaseListActivity.class);
+//        startActivity(intent);
+//        data.add(0, 100 + "");
+//        mAdapter.notifyDataSetChanged();
     }
 
     private void getMovie() {
@@ -82,6 +86,8 @@ public class TestAcivity extends Activity {
             @Override
             public void onCompleted() {
                 Toast.makeText(TestAcivity.this, "oncompleted", Toast.LENGTH_SHORT).show();
+
+
             }
 
             @Override

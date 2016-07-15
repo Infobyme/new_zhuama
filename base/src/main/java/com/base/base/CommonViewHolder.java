@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.base.utils.ImageLoadUtil;
+import com.nostra13.universalimageloader.core.ImageLoader;
+
 /**
  * ListView GridView 通用ViewHolder
  * from hongyang
@@ -66,6 +69,11 @@ public class CommonViewHolder {
     public void setImageViewResource(int viewId, int resourceId) {
         ImageView view = getView(viewId);
         view.setImageResource(resourceId);
+    }
+
+    public void setImageViewByImageLoad(int viewId,String httpUrl){
+        ImageView view = getView(viewId);
+        ImageLoader.getInstance().displayImage(httpUrl,view, ImageLoadUtil.getOpitons());
     }
 
 

@@ -13,7 +13,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
 /**
- * Created by zhuama on 16/7/14.
+ * Created by tongyang on 16/7/14.
  */
 public class BaseApplication extends MultiDexApplication {
 

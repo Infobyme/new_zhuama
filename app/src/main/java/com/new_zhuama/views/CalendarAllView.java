@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.new_zhuama.R;
-import com.new_zhuama.adapter.CalendarListAdapter;
+import com.new_zhuama.main.CalendarListAdapter;
 import com.new_zhuama.entity.Day;
 import com.new_zhuama.entity.Schedule;
 import com.new_zhuama.utils.Utils;

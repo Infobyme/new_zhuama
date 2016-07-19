@@ -1,4 +1,4 @@
-package com.new_zhuama.fragment;
+package com.new_zhuama.main.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,7 +12,8 @@ import com.new_zhuama.R;
 /**
  * Created by zhuama on 16/5/13.
  */
-public class BrokeFragment extends Fragment {
+public class DynamicFragment extends Fragment {
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,6 @@ public class BrokeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_broke,container,false);
+        return inflater.inflate(R.layout.fragment_dynamic,container,false);
     }
 }

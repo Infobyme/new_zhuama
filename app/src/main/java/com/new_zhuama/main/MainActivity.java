@@ -1,4 +1,4 @@
-package com.new_zhuama.main.activity;
+package com.new_zhuama.main;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -7,12 +7,11 @@ import android.support.v4.view.ViewPager;
 
 import com.base.ui.BaseActivity;
 import com.new_zhuama.R;
-import com.new_zhuama.adapter.MainFragmentAdapter;
-import com.new_zhuama.fragment.BrokeFragment;
-import com.new_zhuama.fragment.DynamicFragment;
-import com.new_zhuama.fragment.FindFragment;
-import com.new_zhuama.fragment.MeFragment;
-import com.new_zhuama.fragment.MessageFragment;
+import com.new_zhuama.main.fragment.BrokeFragment;
+import com.new_zhuama.main.fragment.DynamicFragment;
+import com.new_zhuama.main.fragment.FindFragment;
+import com.new_zhuama.main.fragment.MeFragment;
+import com.new_zhuama.main.fragment.MessageFragment;
 
 import java.util.ArrayList;
 import java.util.Arrays;

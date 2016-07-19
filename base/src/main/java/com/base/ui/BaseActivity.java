@@ -10,7 +10,7 @@ import android.support.v4.app.FragmentActivity;
 public abstract class BaseActivity extends FragmentActivity {
 
 
-    private Activity mActivity;
+    public Activity mActivity;
 
 
     @Override

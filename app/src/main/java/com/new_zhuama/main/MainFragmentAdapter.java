@@ -1,4 +1,4 @@
-package com.new_zhuama.adapter;
+package com.new_zhuama.main;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

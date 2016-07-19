@@ -1,4 +1,4 @@
-package com.new_zhuama.adapter;
+package com.new_zhuama.main;
 
 import android.content.Context;
 import android.view.LayoutInflater;

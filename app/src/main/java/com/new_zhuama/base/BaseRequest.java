@@ -89,10 +89,8 @@ public class BaseRequest {
         map.put("devicetoken", "1");
         map.put("ver", "1");
         map.put("dtype", "2");
-        Observable<BaseResponse<User>> observable = mApiServices.login(map);
-        observable.subscribeOn(Schedulers.io())
+        Observable<BaseResponse<User>> observable = mApiServices.login(map).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
-
         return observable;
     }
 

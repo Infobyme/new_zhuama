@@ -34,49 +34,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdd4e00a-d55d-4b88-8afb-b394954d1551" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/base/ApiServices.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/base/BasePresenter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/base/BaseView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/entity/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/entity/UserInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/login/LoginActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/login/LoginContract.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/login/LoginPresenter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/base/CommonRecycleAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/base/CommonRecycleViewHolder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/net/BaseHead.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/net/BaseResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/net/GsonResponseBodyConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/net/ResponseConverterFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/net/ResultException.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/mvp/TestAcivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/mvp/entity/MovieEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/mvp/interfaces/MovieService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/mvp/net/HttpMethod.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/net/ApiServices.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_test.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/main/java/com/base/net/BaseRequest.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/adapter/CalendarListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/main/CalendarListAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/adapter/MainFragmentAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/main/MainFragmentAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/fragment/BrokeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/main/fragment/BrokeFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/fragment/DynamicFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/main/fragment/DynamicFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/fragment/FindFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/main/fragment/FindFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/fragment/MeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/main/fragment/MeFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/fragment/MessageFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/main/fragment/MessageFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/main/activity/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/main/MainActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/net/HttpRequest.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/base/BaseRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_3_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/design_23_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/design_23_3_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_3_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/net/AbsAPICallback.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/net/ApiException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/views/CalendarAllView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/views/CalendarAllView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/main/java/com/base/ui/BaseActivity.java" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/ui/BaseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/main/java/com/base/ui/BaseListActivty.java" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/ui/BaseListActivty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/main/java/com/base/weight/LoadingFoot.java" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/weight/LoadingFoot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/base/BaseRequest.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/base/BaseRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/login/LoginPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/login/LoginPresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/main/java/com/base/net/GsonResponseBodyConverter.java" afterPath="$PROJECT_DIR$/base/src/main/java/com/base/net/GsonResponseBodyConverter.java" />
     </list>
     <ignored path="new_zhuama.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,11 +61,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GsonResponseBodyConverter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GsonResponseBodyConverter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/GsonResponseBodyConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7093207">
+              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,22 +73,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseRequest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseRequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/new_zhuama/base/BaseRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5434439">
-              <caret line="61" column="61" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GsonConverterFactory.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.0-beta4/94360fda8d7bdfcaea21dad9e50c618d19ec966f/converter-gson-2.0.0-beta4-sources.jar!/retrofit2/converter/gson/GsonConverterFactory.java">
+      <file leaf-file-name="ResponseConverterFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/ResponseConverterFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="71" selection-end-column="3" />
-              <folding />
+              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbsAPICallback.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/AbsAPICallback.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -3558,8 +3536,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/base/src/main/java/com/base/base/Configs.java" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/base/base/BaseApplication.java" />
         <option value="$PROJECT_DIR$/base/src/main/java/com/base/utils/ImageLoadUtil.java" />
         <option value="$PROJECT_DIR$/base/src/main/java/com/base/base/CommonViewHolder.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_baselist.xml" />
@@ -3602,13 +3578,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/base/ApiServices.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/login/LoginContract.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/login/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/login/LoginPresenter.java" />
         <option value="$PROJECT_DIR$/base/src/main/java/com/base/net/ResultException.java" />
         <option value="$PROJECT_DIR$/base/src/main/java/com/base/net/BaseResponse.java" />
         <option value="$PROJECT_DIR$/base/src/main/java/com/base/net/BaseHead.java" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/base/net/GsonResponseBodyConverter.java" />
         <option value="$PROJECT_DIR$/base/src/main/java/com/base/net/ResponseConverterFactory.java" />
+        <option value="$PROJECT_DIR$/base/src/main/java/com/base/net/ApiException.java" />
+        <option value="$PROJECT_DIR$/base/src/main/java/com/base/net/AbsAPICallback.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/login/LoginPresenter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/new_zhuama/base/BaseRequest.java" />
+        <option value="$PROJECT_DIR$/base/src/main/java/com/base/net/GsonResponseBodyConverter.java" />
       </list>
     </option>
   </component>
@@ -4188,10 +4166,10 @@
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="1460de95" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Galaxy_Nexus_API_22" />
-    <property name="DEBUGGABLE_DEVICE" value="xiaomi-redmi_note_3-DIN7AM7599999999" />
+    <property name="DEBUGGABLE_DEVICE" value="samsung-sch_n719-4df790b4267c4089" />
     <property name="DEBUGGABLE_PROCESS" value="com.new_zhuama" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="device.picker.selection" value="1460de95" />
+    <property name="device.picker.selection" value="4df790b4267c4089" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="SearchEverywhereHistoryKey" value="base&#9;FILE&#9;file:///Users/zhuama/Documents/new_zhuama/base/src/main/java/com/base/ui/BaseListActivty.java&#10;basere&#9;FILE&#9;file:///Users/zhuama/Documents/new_zhuama/app/src/main/java/com/new_zhuama/base/BaseRequest.java&#10;te&#9;FILE&#9;file:///Users/zhuama/Documents/new_zhuama/app/src/main/java/com/new_zhuama/mvp/TestAcivity.java&#10;ge&#9;FILE&#9;file:///Users/zhuama/Documents/new_zhuama/app/src/main/java/com/new_zhuama/getmovie/GetMovieAcivity.java&#10;tes&#9;FILE&#9;file:///Users/zhuama/Documents/new_zhuama/app/src/main/java/com/new_zhuama/mvp/TestAcivity.java&#10;api&#9;FILE&#9;file:///Users/zhuama/Documents/new_zhuama/app/src/main/java/com/new_zhuama/base/ApiServices.java&#10;htt&#9;FILE&#9;file:///Users/zhuama/Documents/new_zhuama/app/src/main/java/com/new_zhuama/mvp/net/HttpMethod.java&#10;item&#9;FILE&#9;file:///Users/zhuama/Documents/new_zhuama/app/src/main/res/layout/item_text.xml&#10;basev&#9;FILE&#9;file:///Users/zhuama/Documents/new_zhuama/app/src/main/java/com/new_zhuama/base/BaseView.java" />
@@ -4516,7 +4494,13 @@
       <option name="project" value="LOCAL" />
       <updated>1468560362819</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Retrofit增加服务器异常处理">
+      <created>1468920785396</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1468920785396</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -4603,7 +4587,8 @@
     <MESSAGE value="改下名字" />
     <MESSAGE value="日期控件" />
     <MESSAGE value="增加基础功能类" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加基础功能类" />
+    <MESSAGE value="Retrofit增加服务器异常处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="Retrofit增加服务器异常处理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4626,29 +4611,18 @@
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/base/src/main/java/com/base/net/AbsAPICallback.java</url>
+          <line>69</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_calendarall.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1818181">
-          <caret line="124" column="52" selection-start-line="124" selection-start-column="52" selection-end-line="124" selection-end-column="52" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/new_zhuama/views/CalendarAllView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.7535543">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/base/base.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4847,6 +4821,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4865,6 +4840,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4908,6 +4884,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.57030016">
           <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+          <folding>
+            <element signature="e#2994#3457#0" expanded="false" />
+            <element signature="e#3456#3457#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -5068,18 +5048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/new_zhuama/login/LoginPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="82" selection-start-line="36" selection-start-column="82" selection-end-line="36" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1063#1064#0" expanded="true" />
-            <element signature="e#1118#1119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/new_zhuama/base/ApiServices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -5092,25 +5060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/ResultException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08056872">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding>
-            <element signature="e#297#298#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/BaseHead.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -5131,28 +5080,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/BaseHead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32249323">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/ApiException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.27642277">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding>
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.0-beta4/94360fda8d7bdfcaea21dad9e50c618d19ec966f/converter-gson-2.0.0-beta4-sources.jar!/retrofit2/converter/gson/GsonConverterFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.5067751">
           <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="71" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/ResponseConverterFactory.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/new_zhuama/login/LoginPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.047393367">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.75829387">
+          <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#759#779#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/GsonResponseBodyConverter.java">
+    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/ResultException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1342812">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/AbsAPICallback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -5161,9 +5142,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/new_zhuama/base/BaseRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5434439">
-          <caret line="61" column="61" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/ResponseConverterFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/base/net/GsonResponseBodyConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7093207">
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

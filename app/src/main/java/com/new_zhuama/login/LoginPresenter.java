@@ -3,12 +3,13 @@ package com.new_zhuama.login;
 import android.content.Context;
 import android.widget.Toast;
 
+import com.base.net.AbsAPICallback;
+import com.base.net.ApiException;
 import com.base.net.BaseResponse;
 import com.new_zhuama.base.BaseRequest;
 import com.new_zhuama.entity.User;
 
 import rx.Observable;
-import rx.Subscriber;
 
 /**
  * Created by tongyang on 16/7/19.
@@ -26,23 +27,30 @@ public class LoginPresenter implements LoginContract.Presenter {
     @Override
     public void login(String name, String pwd) {
 
-        Subscriber<BaseResponse<User>> subscriber=new Subscriber<BaseResponse<User>>() {
+        AbsAPICallback<BaseResponse<User>> subscriber=new AbsAPICallback<BaseResponse<User>>("网络出错","网络出错","网络出错") {
             @Override
-            public void onCompleted() {
+            protected void onError(ApiException ex) {
+                Toast.makeText(mContext,ex.getMessage(),Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            protected void onPermissionError(ApiException ex) {
+                Toast.makeText(mContext,ex.getMessage(),Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
-            public void onError(Throwable e) {
-                Toast.makeText(mContext,e.getMessage(),Toast.LENGTH_SHORT).show();
+            protected void onResultError(ApiException ex) {
+                Toast.makeText(mContext,ex.getMessage(),Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
             public void onNext(BaseResponse<User> userBaseResponse) {
-                mLoginView.toNextPage();
+                Toast.makeText(mContext,"onNext",Toast.LENGTH_SHORT).show();
+
             }
         };
-
         Observable<BaseResponse<User>> observable = BaseRequest.getInstance().login(name, pwd);
         observable.subscribe(subscriber);
     }

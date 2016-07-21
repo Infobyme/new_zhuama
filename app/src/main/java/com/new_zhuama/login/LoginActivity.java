@@ -5,7 +5,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.base.ui.BaseActivity;
+import com.base.base.ui.BaseActivity;
 import com.new_zhuama.R;
 
 import butterknife.Bind;
@@ -28,15 +28,17 @@ public class LoginActivity extends BaseActivity implements LoginContract.View {
 
     private LoginPresenter mPresenter;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
 
-        mPresenter=new LoginPresenter(mActivity,this);
+    @Override
+    protected int getLayoutResources() {
+        return R.layout.activity_login;
     }
 
+    @Override
+    public void initView() {
+        super.initView();
+        mPresenter=new LoginPresenter(mActivity,this);
+    }
 
     @OnClick(R.id.btn_submit)
     public void submit(){

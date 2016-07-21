@@ -1,8 +1,8 @@
 package com.new_zhuama.base;
 
 
-import com.base.net.BaseResponse;
-import com.new_zhuama.entity.User;
+import com.base.base.net.BaseResponse;
+import com.base.entity.User;
 
 import java.util.Map;
 

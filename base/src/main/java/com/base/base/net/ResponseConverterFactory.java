@@ -1,4 +1,4 @@
-package com.base.net;
+package com.base.base.net;
 
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;

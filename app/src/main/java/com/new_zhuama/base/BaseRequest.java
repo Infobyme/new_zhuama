@@ -1,10 +1,10 @@
 package com.new_zhuama.base;
 
 
-import com.base.net.BaseResponse;
-import com.base.net.ResponseConverterFactory;
+import com.base.base.net.BaseResponse;
+import com.base.base.net.ResponseConverterFactory;
 import com.new_zhuama.BuildConfig;
-import com.new_zhuama.entity.User;
+import com.base.entity.User;
 
 import java.util.HashMap;
 import java.util.Map;

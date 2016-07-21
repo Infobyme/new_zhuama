@@ -1,4 +1,4 @@
-package com.new_zhuama.entity;
+package com.base.entity;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;

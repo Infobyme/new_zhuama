@@ -2,5 +2,8 @@
 <resources>
 
     <color name="c_FF8308">#ff8308</color>
-    
+
+    <color name="c_FFFFFF">#FFFFFF</color>
+    <!--colorPrimaryDark-->
+    <color name="c_FEEE35">#FEEE35</color>
 </resources>

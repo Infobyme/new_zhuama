@@ -13,8 +13,8 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.new_zhuama.R;
-import com.new_zhuama.entity.Day;
-import com.new_zhuama.entity.Schedule;
+import com.base.entity.Day;
+import com.base.entity.Schedule;
 import com.new_zhuama.utils.CalendarDateUtil;
 import com.new_zhuama.utils.Utils;
 

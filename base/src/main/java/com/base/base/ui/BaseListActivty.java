@@ -1,4 +1,4 @@
-package com.base.ui;
+package com.base.base.ui;
 
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -16,8 +16,6 @@ import java.util.List;
 
 import rx.Observable;
 import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
 /**
  * Created by tongyang on 16/7/15.
@@ -52,7 +50,7 @@ public abstract class BaseListActivty<T> extends BaseActivity implements SwipeRe
         mRecyclerView.setOnScrollListener(onLoadMoreScrollListener);
 
         init();
-        dealWithRequest();
+        dealWithRequest(mPage);
 
     }
 
@@ -69,8 +67,8 @@ public abstract class BaseListActivty<T> extends BaseActivity implements SwipeRe
     }
 
 
-    private void dealWithRequest() {
-        Observable<T> observable = sendRequest();
+    private void dealWithRequest(int page) {
+        Observable<T> observable = sendRequest(page);
         observable
                 .subscribe(getSubscriber());
 
@@ -88,7 +86,7 @@ public abstract class BaseListActivty<T> extends BaseActivity implements SwipeRe
 
     public abstract RecyclerView.Adapter getRecycleViewAdapter();
 
-    public abstract Observable<T> sendRequest();
+    public abstract Observable<T> sendRequest(int page);
 
     public abstract Subscriber<T> getSubscriber();
 
@@ -103,7 +101,7 @@ public abstract class BaseListActivty<T> extends BaseActivity implements SwipeRe
     @Override
     public void onRefresh() {
         mPage = 1;
-        dealWithRequest();
+        dealWithRequest(mPage);
     }
 
     private EndlessRecyclerOnScrollListener onLoadMoreScrollListener = new EndlessRecyclerOnScrollListener() {
@@ -116,7 +114,7 @@ public abstract class BaseListActivty<T> extends BaseActivity implements SwipeRe
                 foot.setVisibility(View.VISIBLE);
             }
             mPage++;
-            dealWithRequest();
+            dealWithRequest(mPage);
         }
     };
 }

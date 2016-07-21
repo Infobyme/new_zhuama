@@ -1,4 +1,4 @@
-package com.base.net;
+package com.base.base.net;
 
 /**
  * Created by tongyang on 16/7/19.

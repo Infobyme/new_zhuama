@@ -10,8 +10,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.new_zhuama.R;
-import com.new_zhuama.entity.Day;
-import com.new_zhuama.entity.Schedule;
+import com.base.entity.Day;
+import com.base.entity.Schedule;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

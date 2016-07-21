@@ -1,11 +1,10 @@
 package com.new_zhuama.main;
 
-import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 
-import com.base.ui.BaseActivity;
+import com.base.base.ui.BaseActivity;
 import com.new_zhuama.R;
 import com.new_zhuama.main.fragment.BrokeFragment;
 import com.new_zhuama.main.fragment.DynamicFragment;
@@ -18,7 +17,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
 
 public class MainActivity extends BaseActivity {
@@ -36,11 +34,15 @@ public class MainActivity extends BaseActivity {
 
     private TabLayout.Tab mFindTab, mDynamicTab, mBrokeTab, mMessageTab, mMeTab;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+    protected int getLayoutResources() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initView() {
+        super.initView();
         init();
     }
 

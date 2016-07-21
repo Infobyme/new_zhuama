@@ -1,7 +1,7 @@
 package com.new_zhuama.utils;
 
 
-import com.new_zhuama.entity.Day;
+import com.base.entity.Day;
 
 import java.util.Calendar;
 

@@ -7,9 +7,17 @@ import java.io.Serializable;
  */
 public class BaseHead implements Serializable {
 
-    public int code;
+    public int status;
 
     public String message;
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     public String getMessage() {
         return message;
@@ -17,13 +25,5 @@ public class BaseHead implements Serializable {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
     }
 }

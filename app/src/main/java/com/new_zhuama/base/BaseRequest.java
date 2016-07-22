@@ -3,14 +3,20 @@ package com.new_zhuama.base;
 
 import com.base.base.net.BaseResponse;
 import com.base.base.net.ResponseConverterFactory;
-import com.new_zhuama.BuildConfig;
 import com.base.entity.User;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.new_zhuama.BuildConfig;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import rx.Observable;
@@ -23,7 +29,7 @@ import rx.schedulers.Schedulers;
 public class BaseRequest {
 
     private static final String BASE_URL = "http://app.drama.wang/indexv2/";
-    private static final String BASE_URL_DEBUG = "http://apps.drama.wang/indexv2/";
+    private static final String BASE_URL_DEBUG = "http://apps.drama.wang/indexv3/";
 
     private static final int TIME_OUT_DEfAULT = 10;
     private Retrofit mRetrofit;
@@ -41,25 +47,24 @@ public class BaseRequest {
         OkHttpClient.Builder mHttpBuilder = new OkHttpClient.Builder();
         mHttpBuilder.connectTimeout(TIME_OUT_DEfAULT, TimeUnit.SECONDS);
 
-//        Gson gson = new GsonBuilder()
-//                .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
-//                .setExclusionStrategies(new ExclusionStrategy() {   //把RealmObject排除在外,不然会报错。
-//                    @Override
-//                    public boolean shouldSkipField(FieldAttributes f) {
-//                        return f.getDeclaringClass().equals(RealmObject.class);
-//                    }
-//
-//                    @Override
-//                    public boolean shouldSkipClass(Class<?> clazz) {
-//                        return false;
-//                    }
-//                })
-//                .create();
+        mHttpBuilder.addInterceptor(new Interceptor() {
+            @Override
+            public Response intercept(Chain chain) throws IOException {
+
+                Request request = chain.request();
+
+                return chain.proceed(request);
+            }
+        });
+
+        Gson gson = new GsonBuilder()
+                .setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
+                .create();
 
         mRetrofit = new Retrofit.Builder()
                 .client(mHttpBuilder.build())
                 .baseUrl(baseUrl)
-                .addConverterFactory(ResponseConverterFactory.create())
+                .addConverterFactory(ResponseConverterFactory.create(gson))
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
 

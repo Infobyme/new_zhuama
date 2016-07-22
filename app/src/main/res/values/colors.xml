@@ -6,4 +6,10 @@
     <color name="c_FFFFFF">#FFFFFF</color>
     <!--colorPrimaryDark-->
     <color name="c_FEEE35">#FEEE35</color>
+    <!--登录背景 黑线-->
+    <color name="c_333333">#333333</color>
+    <!--输入提示内容颜色-->
+    <color name="c_9b9b9b">#9b9b9b</color>
+    <!--黑色-->
+    <color name="c_000000">#000000</color>
 </resources>

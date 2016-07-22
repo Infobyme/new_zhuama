@@ -6,7 +6,11 @@ import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.base.utils.ImageLoadUtil;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 /**
  * 通用的RecycleViewHolder
@@ -51,5 +55,16 @@ public class CommonRecycleViewHolder extends RecyclerView.ViewHolder {
     public void setTextViewText(int viewId,String text){
         TextView view=getView(viewId);
         view.setText(text);
+    }
+
+    public void setImageViewResource(int viewId, int resourceId) {
+        ImageView view = getView(viewId);
+        view.setImageResource(resourceId);
+    }
+
+    public void setImageViewByImageLoad(int viewId,String httpUrl){
+        ImageView view = getView(viewId);
+        view.setTag(httpUrl);
+        ImageLoader.getInstance().displayImage(httpUrl,view, ImageLoadUtil.getOpitons());
     }
 }

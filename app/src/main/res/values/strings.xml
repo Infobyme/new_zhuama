@@ -16,5 +16,12 @@
 
 
 
+    <!--中转登录注册-->
+
+    <string name="transit_register">注册</string>
+    <string name="transit_login">登录</string>
+
+
+
 
 </resources>

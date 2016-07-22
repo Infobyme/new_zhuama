@@ -1,6 +1,7 @@
 package com.base.base.adapter;
 
 import android.content.Context;
+import android.os.Build;
 import android.text.SpannableString;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
@@ -73,6 +74,9 @@ public class CommonViewHolder {
 
     public void setImageViewByImageLoad(int viewId,String httpUrl){
         ImageView view = getView(viewId);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            view.setTransitionName(httpUrl);
+        }
         ImageLoader.getInstance().displayImage(httpUrl,view, ImageLoadUtil.getOpitons());
     }
 

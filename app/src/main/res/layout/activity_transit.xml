@@ -54,4 +54,32 @@
         android:src="@mipmap/ic_welcome_drama" />
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="45dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_register"
+            style="@style/tv_c_000000"
+            android:layout_width="149dp"
+            android:layout_height="43dp"
+            android:layout_marginRight="23dp"
+            android:background="@drawable/transit_shape_register"
+            android:text="@string/transit_register" />
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/tv_c_000000"
+            android:layout_width="149dp"
+            android:layout_height="43dp"
+            android:background="@drawable/transit_shape_login"
+            android:text="@string/transit_login" />
+
+    </LinearLayout>
+
+
 </FrameLayout>

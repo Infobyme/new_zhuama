@@ -32,10 +32,10 @@ public class GsonResponseBodyConverter<T> implements Converter<ResponseBody, T> 
 
         BaseHead head = gson.fromJson(response, BaseHead.class);
 
-        if (head.getCode() == 1) {
+        if (head.getStatus() == 0) {
             return gson.fromJson(response, type);
         } else {
-            throw new ResultException(head.getCode(), head.getMessage());
+            throw new ResultException(head.getStatus(), head.getMessage());
         }
     }
 }

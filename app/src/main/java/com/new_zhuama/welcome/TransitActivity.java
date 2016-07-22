@@ -17,10 +17,10 @@ import com.new_zhuama.R;
 import butterknife.Bind;
 
 /**
- * 欢迎页
+ * 中转登录注册页面
  * Created by tongyang on 16/7/21.
  */
-public class WelcomeActivity extends BaseActivity {
+public class TransitActivity extends BaseActivity {
 
 
     @Bind(R.id.iv_drama_icon)
@@ -42,7 +42,7 @@ public class WelcomeActivity extends BaseActivity {
 
     @Override
     protected int getLayoutResources() {
-        return R.layout.activity_welcome;
+        return R.layout.activity_transit;
     }
 
     @Override
@@ -215,7 +215,6 @@ public class WelcomeActivity extends BaseActivity {
                                                     @Override
                                                     public void onAnimationEnd(Animator animation) {
                                                         super.onAnimationEnd(animation);
-                                                        finish();
                                                     }
                                                 });
                                             }
